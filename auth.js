@@ -29,7 +29,7 @@ async function createNewUser(email) {
         const userRef = doc(db, 'users', email);
         await setDoc(userRef, {
             email: email,
-            isPremium: false,
+            isPremium: true,
             createdAt: new Date()
         }, { merge: true });
         return true;
