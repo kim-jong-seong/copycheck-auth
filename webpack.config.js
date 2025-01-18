@@ -2,17 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: {
-    popup: './popup.js',
-    content: './content.js',
-    background: './background.js'
-  },
+  entry: './auth.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
-  },
-  resolve: {
-    extensions: ['.js']
+    filename: 'bundle.js'
   },
   module: {
     rules: [
